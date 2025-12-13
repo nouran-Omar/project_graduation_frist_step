@@ -109,7 +109,7 @@ export default function PulseXApp() {
 
     return (
         // تم إضافة basename هنا عشان الراوتر يفهم رابط جيت هب
-        <Router basename="/GP.2.1">
+        <Router basename="/project_graduation_frist_step">
             <div className="font-sans text-slate-900 antialiased bg-white">
                 <Routes>
                     <Route path="/" element={<Home />} />
