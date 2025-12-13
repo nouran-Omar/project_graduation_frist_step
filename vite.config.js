@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-base: "/GP.2.1/",
+base: "/project_graduation_frist_step/",
 })
