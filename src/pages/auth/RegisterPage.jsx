@@ -12,7 +12,7 @@ import {
   LayoutDashboard,
   LogIn,
 } from "lucide-react";
-import AuthNavbar from "../components/layout/AuthNavbar";
+import AuthNavbar from "../../components/layout/AuthNavbar";
 
 const Register = () => {
   const [currentStep, setCurrentStep] = useState(2);

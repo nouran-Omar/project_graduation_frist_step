@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Check } from 'lucide-react'; 
 import { Link, useNavigate } from 'react-router-dom'; 
-import loginImg from '../assets/Login Photo.png'; 
-import loginIcon from '../assets/Grouplogin.svg'; 
+
+// تأكدي إن مسارات الصور دي صحيحة بالنسبة لمكان الملف الجديد
+// مثال للتصحيح في LoginPage
+import loginImg from '../../assets/Login Photo.png'; 
+import loginIcon from '../../assets/Grouplogin.svg';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -23,6 +26,7 @@ const LoginPage = () => {
     let newErrors = {};
     let isValid = true;
 
+    // --- Validation Logic ---
     if (!formData.email) {
       newErrors.email = "Email address is required";
       isValid = false;
@@ -41,20 +45,31 @@ const LoginPage = () => {
 
     setErrors(newErrors);
 
+    // --- Role Based Redirection Logic (الجزء الجديد) ---
     if (isValid) {
-      console.log("Form Submitted", formData);
+      const emailLower = formData.email.toLowerCase();
+
+      if (emailLower.includes('admin')) {
+        navigate('/admin/dashboard');
+      } else if (emailLower.includes('doctor')) {
+        navigate('/doctor/dashboard');
+      } else {
+        navigate('/patient/dashboard');
+      }
     }
   };
 
   return (
     <div className="w-full h-screen bg-gray-50 overflow-hidden flex relative">
  
+        {/* الصورة الجانبية */}
         <img 
             src={loginImg} 
             alt="Login Visual" 
             className="absolute left-0 top-0 w-[58%] h-full object-cover hidden lg:block" 
         />
 
+        {/* فورم الدخول */}
         <div className="w-full lg:w-[42%] h-full absolute right-0 top-0 bg-gray-50 flex items-center justify-center">
             <div className="w-full max-w-[480px] px-8 py-6 bg-white rounded-[24px] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] border border-gray-100 mx-4">
                 
@@ -65,6 +80,7 @@ const LoginPage = () => {
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                     
+                    {/* Email Input */}
                     <div className="flex flex-col gap-2">
                         <label className={`text-sm font-normal flex gap-1 ${errors.email ? 'text-red-600' : 'text-gray-800'}`}>
                             Email Address <span className="text-red-600">*</span>
@@ -85,6 +101,7 @@ const LoginPage = () => {
                         {errors.email && <span className="text-xs text-red-600 mt-1">{errors.email}</span>}
                     </div>
 
+                    {/* Password Input */}
                     <div className="flex flex-col gap-2">
                         <label className={`text-sm font-normal flex gap-1 ${errors.password ? 'text-red-600' : 'text-gray-800'}`}>
                             Password <span className="text-red-600">*</span>
@@ -107,6 +124,7 @@ const LoginPage = () => {
                         {errors.password && <span className="text-xs text-red-600 mt-1">{errors.password}</span>}
                     </div>
 
+                    {/* Remember me & Forgot Password */}
                     <div className="flex justify-between items-center mt-1">
                         <label className="flex items-center gap-2 cursor-pointer group select-none">
                             <input type="checkbox" className="peer sr-only" />
@@ -124,6 +142,7 @@ const LoginPage = () => {
                         </Link>
                     </div>
 
+                    {/* Submit Button */}
                     <button type="submit" className="w-full h-[50px] bg-[#333CF5] text-white rounded-[24px] font-medium text-[14px] hover:bg-[#282eb5] transition-colors flex items-center justify-center gap-2 shadow-md group">
                         Continue to Dashboard
                         <img 
@@ -136,9 +155,11 @@ const LoginPage = () => {
 
                 <div className="w-full h-[1px] bg-gray-200 my-8"></div>
 
+                {/* Signup Link */}
                 <div className="flex justify-center gap-1 text-[14px]">
                       <span className="text-gray-500">Don't have an account?</span>
-                      <Link to="/signup" className="text-[#333CF5] font-medium hover:underline">
+                      {/* عدلت اللينك هنا لـ /register عشان يطابق الـ App.jsx */}
+                      <Link to="/register" className="text-[#333CF5] font-medium hover:underline">
                         Create Account
                       </Link>
                 </div>

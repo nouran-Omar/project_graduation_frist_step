@@ -213,7 +213,7 @@
 // };
 import React from 'react';
 import Button from '../ui/Button';
-import { HERO_CONTENT } from '../../data/content';
+import { HERO_CONTENT } from "../../data/content";
 
 import heartImg from '../../assets/Heart_hero.svg';
 import pulseIcon from '../../assets/pulse_icon_Hero.svg';
