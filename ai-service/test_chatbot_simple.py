@@ -111,19 +111,28 @@ class ChatbotService:
         """Extract heart-related symptoms from text"""
         detected_symptoms = []
         
-        for symptom in self.risk_factors.keys():
-            # Create flexible pattern that handles variations
-            symptom_words = symptom.split()
-            
-            # Check if all words of the symptom appear in the text
-            if len(symptom_words) == 1:
-                # Single word symptom
-                if symptom in text:
+        # Map variations to standard symptom names
+        symptom_variations = {
+            'chest pain': ['chest pain', 'chest ache', 'chest hurt'],
+            'shortness of breath': ['shortness of breath', 'short of breath', 'breath shortness', 'breathing difficulty', 'difficulty breathing'],
+            'high blood pressure': ['high blood pressure', 'hypertension', 'elevated blood pressure'],
+            'high cholesterol': ['high cholesterol', 'elevated cholesterol', 'hypercholesterolemia'],
+            'diabetes': ['diabetes', 'diabetic', 'blood sugar'],
+            'smoking': ['smoking', 'smoke', 'smoker'],
+            'family history': ['family history', 'hereditary', 'genetic'],
+            'obesity': ['obesity', 'obese', 'overweight'],
+            'irregular heartbeat': ['irregular heartbeat', 'arrhythmia', 'heart rhythm', 'irregular pulse'],
+            'fatigue': ['fatigue', 'tired', 'exhausted', 'weakness', 'weak'],
+            'dizziness': ['dizziness', 'dizzy', 'lightheaded', 'vertigo'],
+            'swelling': ['swelling', 'swollen', 'edema'],
+            'palpitations': ['palpitations', 'palpitation', 'heart racing', 'rapid heartbeat']
+        }
+        
+        for symptom, variations in symptom_variations.items():
+            for variation in variations:
+                if variation in text:
                     detected_symptoms.append(symptom)
-            else:
-                # Multi-word symptom - check if all words appear
-                if all(word in text for word in symptom_words):
-                    detected_symptoms.append(symptom)
+                    break  # Only add once per symptom
         
         return detected_symptoms
     

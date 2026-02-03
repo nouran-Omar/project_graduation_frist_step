@@ -294,9 +294,6 @@ curl -X POST "http://localhost:8000/api/chatbot" \
     }
   }'
 ```
-  -F "xray_file=@test_images/chest_xray.jpg" \
-  -F "lab_test_file=@test_images/lab_test.jpg"
-```
 
 ### Interactive API Documentation
 

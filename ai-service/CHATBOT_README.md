@@ -177,7 +177,7 @@ POST /api/chatbot
 - Symptoms: chest pain, shortness of breath, irregular heartbeat
 - Recommendations: Urgent medical attention
 
-### Example 2: Medium Risk Assessment
+### Example 2: Low Risk Assessment (near Medium threshold)
 **Input:**
 ```json
 {
@@ -186,11 +186,37 @@ POST /api/chatbot
 ```
 
 **Output:**
-- Risk Level: Low Risk ✅ (15%)
-- Symptoms: high blood pressure
-- Recommendations: Schedule appointment, monitor symptoms
+- Risk Level: Low Risk ✅ (23%)
+- Symptoms: high blood pressure, dizziness
+- Recommendations: Monitor symptoms, maintain healthy habits
 
-### Example 3: Non-Medical Query
+### Example 3: Medium Risk Assessment
+**Input:**
+```json
+{
+  "message": "I have chest pain and high cholesterol"
+}
+```
+
+**Output:**
+- Risk Level: Medium Risk ⚡ (40%)
+- Symptoms: chest pain, high cholesterol
+- Recommendations: Schedule appointment, get comprehensive tests
+
+### Example 3: Medium Risk Assessment
+**Input:**
+```json
+{
+  "message": "I have chest pain and high cholesterol"
+}
+```
+
+**Output:**
+- Risk Level: Medium Risk ⚡ (40%)
+- Symptoms: chest pain, high cholesterol
+- Recommendations: Schedule appointment, get comprehensive tests
+
+### Example 4: Non-Medical Query
 **Input:**
 ```json
 {
@@ -202,7 +228,7 @@ POST /api/chatbot
 - Type: non_medical
 - Response: Friendly prompt asking for heart health concerns
 
-### Example 4: Non-Heart Medical Query
+### Example 5: Non-Heart Medical Query
 **Input:**
 ```json
 {
