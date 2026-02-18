@@ -93,6 +93,19 @@ PulseX is a health management system that connects patients with doctors, manage
 - **Story Management**: Moderate patient stories
 - **Activity Logs**: View system activity and user actions
 
+## 📚 Documentation
+
+Comprehensive documentation is available in the [`docs/`](./docs/) directory:
+
+- **[📚 Documentation Hub](./docs/README.md)** - Complete documentation index
+- **[🚀 Quick Start Guide](./docs/guides/QUICK_START_GUIDE.md)** - Get started quickly
+- **[🔌 API Documentation](./docs/api/API_DOCUMENTATION.md)** - Complete API reference
+- **[📊 Project Summary](./docs/summaries/PROJECT_SUMMARY.md)** - Project overview
+- **[✨ Features Documentation](./docs/features/)** - Feature-specific guides
+- **[🌍 Arabic Documentation](./docs/translations/)** - التوثيق بالعربية
+
+For more documentation, see the [docs directory](./docs/).
+
 ## 🚀 Getting Started
 
 ### Prerequisites
