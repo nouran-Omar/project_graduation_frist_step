@@ -1,0 +1,449 @@
+.pageWrapper {
+  padding: 20px 40px;
+  background: #f6f7f8;
+  min-height: 100vh;
+  font-family: "inter", sans-serif;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333cf5;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.mainCard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.blueHeader {
+  background: #2563eb; /* نفس درجة الأزرق في الصورة */
+  padding: 30px 40px;
+}
+.headerInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.infoBlock {
+  display: flex;
+  gap: 12px;
+  color: white;
+  align-items: center;
+}
+.iconCircle {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.textGroup span {
+  font-size: 12px;
+  opacity: 0.85;
+  display: block;
+}
+.textGroup h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 2px 0;
+}
+.textGroup p {
+  font-size: 12px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.scrollBody {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* Sections Styling */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionHeaderPurple {
+  background: #f5f3ff;
+  color: #7c3aed;
+  padding: 12px 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.sectionHeaderGreen {
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 12px 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.sectionHeaderOrange {
+  background: #fff7ed;
+  color: #ea580c;
+  padding: 12px 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Medications Grid & Cards */
+.medGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.medCard {
+  border: 1px solid #f3f4f6;
+  border-left: 5px solid #a855f7;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  transition: transform 0.2s;
+}
+.medIndex {
+  min-width: 32px;
+  height: 32px;
+  background: #a855f7;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.medContent {
+  flex: 1;
+}
+.medContent h5 {
+  font-size: 17px;
+  color: #111827;
+  margin: 0 0 5px 0;
+}
+.dosageLabel {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.metaRow {
+  display: flex;
+  gap: 15px;
+}
+.metaBox {
+  flex: 1;
+  background: #fafafa;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #f3f4f6;
+}
+.metaBox span {
+  display: block;
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+.metaBox strong {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 600;
+}
+
+/* Labs & Radiology */
+.labList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.labCard {
+  background: white;
+  border: 1px solid #f3f4f6;
+  border-left: 5px solid #22c55e;
+  border-radius: 16px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.labInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.labNum {
+  width: 28px;
+  height: 28px;
+  background: #22c55e;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+.labInfo h6 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #1f2937;
+}
+.labInfo p {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.uploadBtn {
+  background: #333cf5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Warnings & Notes */
+.instructionAmber {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  color: #b45309;
+  align-items: center;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.notesBox {
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #f3f4f6;
+  line-height: 1.6;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.pageWrapper {
+  padding: 40px;
+  background: #f6f7f8;
+  min-height: 100vh;
+}
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333cf5;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.mainCard {
+  background: white;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 1107px;
+  margin: 0 auto;
+}
+
+/* ── Blue Header ── */
+.blueHeader {
+  background: linear-gradient(90deg, #1d4ed8 0%, #333cf5 100%);
+  padding: 32px 60px;
+}
+.headerInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.infoBlock {
+  display: flex;
+  gap: 15px;
+  color: white;
+}
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.infoBlock h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 2px 0;
+}
+.infoBlock span {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.scrollBody {
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ── Medications ── */
+.medCard {
+  background: #f9fafb;
+  border-left: 5px solid #ad46ff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+}
+.medIndex {
+  width: 36px;
+  height: 36px;
+  background: #ad46ff;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+.metaRow {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+.metaBox {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  flex: 1;
+}
+
+/* ── Labs & Preview Card ── */
+.labItemCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 24px;
+  border-left: 5px solid #00c950;
+}
+.labTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.uploadBtn {
+  background: #333cf5;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 👈 شكل كرت الملف المرفوع الجديد */
+.previewCard {
+  margin-top: 20px;
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.previewLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #10b981;
+}
+.fileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fileName {
+  font-weight: 700;
+  font-size: 14px;
+  color: #010218;
+}
+.fileSize {
+  font-size: 12px;
+  color: #6b7280;
+}
+.successBadge {
+  color: #00a63e;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.removeBtn {
+  color: #ef4444;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.loader {
+  padding: 100px;
+  text-align: center;
+  color: #333cf5;
+  font-weight: 700;
+}

@@ -1,0 +1,651 @@
+/* ═══════════════════════════════════════════════════════
+   PatientManagement — Figma-matched styles
+   Colors from Figma palette:
+     --blue-1   : #333CF5  (primary / indigo)
+     --bg-main  : #F6F7F8
+     --black    : #010218
+     --muted    : #6B7280  (neutral-500)
+     --female   : #FD7E14  (orange-500)
+     --male     : #28A745  (green-600)
+═══════════════════════════════════════════════════════ */
+
+/* ── Page wrapper ── */
+.page {
+  /* background-color: #f6f7f8; */
+  min-height: 100vh;
+  padding: 32px;
+  font-family: "inter", "inter", sans-serif;
+}
+
+/* ── Card ── */
+.card {
+  /* background: rgba(255, 255, 255, 0.9); */
+  border-radius: 24px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); */
+  /* overflow: hidden; */
+  padding: 28px 35px 24px;
+}
+
+/* ── Card Header ── */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #010218;
+  margin: 0;
+  font-family: "inter", sans-serif;
+}
+
+.titleIcon {
+  font-size: 28px;
+  color: #010218;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0;
+  font-family: "inter", sans-serif;
+  line-height: 1.4;
+}
+
+/* ── Actions row ── */
+.actionsRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Search */
+.searchWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  color: rgba(107, 114, 128, 0.7);
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 240px;
+  height: 40px;
+  padding: 0 16px 0 42px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  font-size: 15px;
+  color: #374151;
+  outline: none;
+  font-family: "inter", sans-serif;
+  transition: border-color 0.2s;
+}
+.searchInput:focus {
+  border-color: #333cf5;
+}
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+/* Export button */
+.exportBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(107, 114, 128, 0.4);
+  background: #fff;
+  color: #010218;
+  font-size: 15px;
+  font-family: "inter", sans-serif;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+.exportBtn:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* Add Patient button */
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 20px;
+  border: none;
+  background: #333cf5;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "inter", sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.addBtn:hover {
+  background: #2530e0;
+}
+
+/* ── Bulk action bar ── */
+.bulkBar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 24px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  animation: slideUp 0.2s ease;
+}
+
+.bulkCount {
+  color: #333cf5;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.bulkDeleteBtn {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bulkDeleteBtn:hover {
+  background: #b02a37;
+}
+
+.bulkCancelBtn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ── Table wrapper ── */
+.tableWrap {
+  border-radius: 16px;
+  border: 0.6px solid rgba(107, 114, 128, 0.4);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+/* ── Table ── */
+.table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  font-family: "inter", sans-serif;
+}
+
+/* Header */
+.thCheck {
+  width: 64px;
+  padding: 10px 12px;
+  background-color: #333cf5;
+  border-bottom: 1px solid #bfdbfe;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.th {
+  padding: 10px 20px;
+  background-color: #333cf5;
+  border-bottom: 1px solid #bfdbfe;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.thCenter {
+  text-align: center;
+}
+
+/* Body rows */
+.tr {
+  transition: background 0.12s;
+}
+.trEven {
+  background-color: #f9fafb;
+}
+.trOdd {
+  background-color: #fff;
+}
+.trSelected {
+  background-color: #eef0ff !important;
+}
+.tr:hover {
+  background-color: #f0f2ff !important;
+}
+
+.tr:last-child .td,
+.tr:last-child .tdCheck {
+  border-bottom: none;
+}
+
+.tdCheck {
+  width: 64px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #dbeafe;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.td {
+  padding: 10px 20px;
+  border-bottom: 1px solid #dbeafe;
+  font-size: 15px;
+  color: #010218;
+  vertical-align: middle;
+}
+
+.tdCenter {
+  text-align: center;
+}
+
+/* Checkbox */
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #333cf5;
+  cursor: pointer;
+}
+
+/* Name cell */
+.nameCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.nameText {
+  font-size: 15px;
+  font-weight: 400;
+  color: #010218;
+  white-space: nowrap;
+}
+
+.mutedText {
+  font-size: 15px;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* Gender badges */
+.badgeFemale {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #fd7e14;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.badgeMale {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Actions cell */
+.actionsCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.editBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+  padding: 5px 7px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition:
+    color 0.15s,
+    background 0.15s;
+}
+.editBtn:hover {
+  color: #333cf5;
+  background: #eef0ff;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #dc3545;
+  padding: 5px 7px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition:
+    color 0.15s,
+    background 0.15s;
+}
+.deleteBtn:hover {
+  color: #b02a37;
+  background: #fee2e2;
+}
+
+/* ── Loading / Empty ── */
+.loadingState,
+.emptyState {
+  padding: 60px 20px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+/* ── Pagination bar ── */
+.paginationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.rppGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rppLabel,
+.rppTotal {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333cf5;
+  font-family: "inter", sans-serif;
+}
+
+.rppSelect {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 64px;
+  height: 32px;
+  padding: 0 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333cf5;
+  cursor: pointer;
+  user-select: none;
+  justify-content: center;
+}
+
+.rppMenu {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  z-index: 200;
+  min-width: 64px;
+}
+
+.rppMenu li {
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.rppMenu li:hover {
+  background: #f3f4f6;
+}
+.rppActive {
+  color: #333cf5 !important;
+  font-weight: 700;
+}
+
+/* Page buttons */
+.pages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pageBtn {
+  width: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  color: #374151;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+  font-family: "inter", sans-serif;
+}
+.pageBtn:hover {
+  background: #f3f4f6;
+}
+
+.pageActive {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #333cf5;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "inter", sans-serif;
+}
+
+.pageArrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #9ca3af;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.12s,
+    color 0.12s;
+}
+.pageArrow:hover:not(:disabled) {
+  background: #f3f4f6;
+  color: #374151;
+}
+.pageArrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════════════════════
+   Doctor-style header/search classes
+   (used by the new PatientManagement JSX layout)
+══════════════════════════════════════════════════════ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  color: #010218;
+}
+
+.titleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titleWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.titleWithIcon h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #010218;
+  margin: 0;
+  font-family: "inter", sans-serif;
+}
+
+.titleInfo p {
+  color: #757575;
+  font-size: 14px;
+  margin: 4px 0 0 0;
+  font-family: "inter", sans-serif;
+}
+
+.iconSetting {
+  font-size: 35px;
+  color: #010218;
+}
+
+.search {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.topActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Bulk floating bar ── */
+.bulkFloatingBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 12px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.bulkInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bulkCheckbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #333cf5;
+  cursor: pointer;
+}
+
+.bulkCount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #010218;
+}
+
+.bulkButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

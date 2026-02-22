@@ -1,0 +1,603 @@
+/* ═══════════════════════════════════════════════════
+   ReportsManagement.module.css  –  PulseX Admin
+   ═══════════════════════════════════════════════════ */
+
+/* ── Page Container ─────────────────────────────── */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  min-height: 100%;
+}
+
+/* ── Page Header ─────────────────────────────────── */
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.titleIcon {
+  font-size: 22px;
+  color: #010218;
+}
+
+.pageTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: #010218;
+  margin: 0;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: #757575;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Stat Cards ─────────────────────────────────── */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.statCard {
+  border-radius: 20px;
+  padding: 22px 22px 18px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard::after {
+  content: "";
+  position: absolute;
+  right: -16px;
+  bottom: -16px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.statTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.statIcon {
+  font-size: 22px;
+  opacity: 0.9;
+  display: flex;
+}
+
+.trendUp {
+  font-size: 18px;
+  font-weight: 800;
+}
+.trendWarn {
+  font-size: 17px;
+  opacity: 0.9;
+}
+.trendOk {
+  font-size: 17px;
+  opacity: 0.9;
+}
+.trendGray {
+  font-size: 17px;
+  opacity: 0.9;
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.88;
+}
+
+.statValue {
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+}
+
+/* ── Reports List ───────────────────────────────── */
+.reportsList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.empty {
+  text-align: center;
+  font-size: 14px;
+  color: #9ca3af;
+  font-weight: 600;
+  padding: 80px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+/* ── Report Card ────────────────────────────────── */
+.reportCard {
+  background: #fff;
+  border-radius: 20px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: box-shadow 0.2s;
+}
+
+.reportCard:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
+}
+
+/* Reporter Row */
+.reporterRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.reporterAvatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e8eaff;
+  flex-shrink: 0;
+}
+
+.reporterAvatarFallback {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #333cf5;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reporterInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.reporterName {
+  font-size: 15px;
+  font-weight: 800;
+  color: #010218;
+}
+
+.reporterTime {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* Badges */
+.badgesRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.badgePending {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1.5px solid #bfdbfe;
+}
+
+.badgeReviewed {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: #dcfce7;
+  color: #16a34a;
+  border: 1.5px solid #bbf7d0;
+}
+
+.badgeDismissed {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 1.5px solid #e5e7eb;
+}
+
+.badgeCategory {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1.5px solid #fed7aa;
+}
+
+.badgeType {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: #f9fafb;
+  color: #6b7280;
+  border: 1.5px solid #e5e7eb;
+}
+
+/* Story Ref */
+.storyRef {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+  margin: 0;
+}
+
+.storyRef em {
+  font-style: normal;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* Content Box */
+.contentBox {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contentBoxAuthor {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #82181A;
+  margin: 0;
+}
+
+.warnIcon {
+  font-size: 14px;
+  flex-shrink: 0;
+  color: #E7000B;
+}
+
+.contentBoxText {
+  font-size: 13px;
+  color: #374151;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Reason Box */
+.reasonBox {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+
+.reasonLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.reasonText {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Action Buttons ─────────────────────────────── */
+.actionsRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Base button */
+.btnView,
+.btnDelete,
+.btnReviewed,
+.btnDismiss,
+.btnReopen {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition:
+    filter 0.18s,
+    transform 0.15s;
+}
+
+.btnView,
+.btnDelete,
+.btnReviewed,
+.btnDismiss,
+.btnReopen {
+  white-space: nowrap;
+}
+
+.btnView,
+.btnDelete,
+.btnReviewed,
+.btnDismiss,
+.btnReopen {
+  transform: translateY(0);
+}
+
+.btnView:hover,
+.btnDelete:hover,
+.btnReviewed:hover,
+.btnDismiss:hover,
+.btnReopen:hover {
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+}
+
+/* View */
+.btnView {
+  background: #333cf5;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(51, 60, 245, 0.28);
+}
+
+/* Delete */
+.btnDelete {
+  background: #E7000B;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.28);
+}
+
+/* Mark Reviewed */
+.btnReviewed {
+  background: #00A63E;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.28);
+}
+
+/* Dismiss */
+.btnDismiss {
+  background: #4A5565;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(55, 65, 81, 0.18);
+}
+
+/* Reopen */
+.btnReopen {
+  background: #f97316;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.28);
+}
+
+/* ── Delete Content Modal ───────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.deleteModal {
+  background: #fff;
+  border-radius: 28px;
+  width: 100%;
+  max-width: 460px;
+  padding: 36px 32px 32px;
+  text-align: center;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.deleteIconWrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fef2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.deleteIcon {
+  font-size: 28px;
+  color: #ef4444;
+}
+
+.deleteTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: #010218;
+  margin: 0;
+}
+
+.deleteSubtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.deletePreview {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px 18px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.deletePreviewLine {
+  font-size: 14px;
+  color: #374151;
+  margin: 0;
+}
+
+.deletePreviewLine strong {
+  font-weight: 700;
+  color: #010218;
+}
+
+.deletePreviewQuote {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 4px 0 0;
+  padding-top: 6px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.deleteWarning {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+
+.deleteBtnRow {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.deleteCancelBtn {
+  flex: 1;
+  height: 48px;
+  border-radius: 14px;
+  border: 1.5px solid #e5e7eb;
+  background: #f3f4f6;
+  font-size: 15px;
+  font-weight: 700;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.deleteCancelBtn:hover {
+  background: #e5e7eb;
+}
+
+.deleteConfirmBtn {
+  flex: 1;
+  height: 48px;
+  border-radius: 14px;
+  border: none;
+  background: #ef4444;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.32);
+}
+
+.deleteConfirmBtn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1100px) {
+  .statsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .statsRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .badgesRow {
+    margin-left: 0;
+  }
+
+  .actionsRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btnView,
+  .btnDelete,
+  .btnReviewed,
+  .btnDismiss,
+  .btnReopen {
+    justify-content: center;
+  }
+}

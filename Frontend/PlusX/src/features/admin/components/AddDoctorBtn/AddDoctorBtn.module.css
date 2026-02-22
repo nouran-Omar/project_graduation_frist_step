@@ -1,0 +1,412 @@
+/* AddDoctorBtn.module.css */
+
+/* ── Outer Container ─────────────────────────────────────────── */
+.container {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow:
+    0 8px 10px -6px rgba(0, 0, 0, 0.1),
+    0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  outline: 0.8px solid #e5e7eb;
+  font-family: "inter", sans-serif;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.header {
+  background: linear-gradient(to right, #155dfc, #1447e6);
+  padding: 24px 32px;
+  border-bottom: 0.8px solid #1447e6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerIcon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.headerTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.headerSub {
+  font-size: 13px;
+  color: #bfdbfe;
+  margin-top: 2px;
+}
+
+/* ── Form Body ────────────────────────────────────────────────── */
+.formBody {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+  padding: 32px;
+}
+
+/* ── Upload Column ── */
+.uploadCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.uploadLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: #364153;
+}
+
+.uploadBox {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, #eff6ff, #eef2ff);
+  border: 1.6px dashed #93c5fd;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  overflow: hidden;
+  padding: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.uploadBox:hover {
+  background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+  border-color: #60a5fa;
+}
+
+.uploadIconBox {
+  width: 80px;
+  height: 80px;
+  background: #dbeafe;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.uploadTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #101828;
+  margin-bottom: 4px;
+}
+
+.uploadHint {
+  font-size: 12px;
+  color: #6a7282;
+}
+
+.previewImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* ── Personal Info Card ─────────────────────────────────────── */
+.personalInfo {
+  background: #F9FAFB;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  outline: 0.8px solid #e5e7eb;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #101828;
+  margin-bottom: 20px;
+}
+
+/* ── Grid Inputs ── */
+.gridInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ── Input Group ── */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #364153;
+}
+
+.required {
+  color: #FB2C36;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  outline: 0.8px solid #d1d5dc;
+  transition: outline 0.2s;
+  /* overflow: hidden; */
+}
+
+.inputWrapper:focus-within {
+  outline: 1.5px solid #155dfc;
+}
+
+.inputError {
+  outline: 1.5px solid #FB2C36 !important;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 5px;
+  color: #99a1af;
+  font-size: 18px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inputField {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #101828;
+  outline: none;
+  font-family: "inter", sans-serif;
+}
+
+.inputField::placeholder {
+  color: rgba(10, 10, 10, 0.4);
+}
+
+.inputWithIcon {
+  padding-left: 40px;
+}
+
+/* date picker wrapper fix */
+.datePickerWrapper {
+  width: 100%;
+}
+
+/* ── Error Text ── */
+.errorText {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #FB2C36;
+}
+
+.errorIcon {
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* ── Gender — moved to src/features/admin/components/shared/GenderToggle/ ── */
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px 32px 28px;
+}
+
+.btnCancel {
+  padding: 12px 28px;
+  background: #e5e7eb;
+  color: #010218;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.14);
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  font-family: "inter", sans-serif;
+}
+
+.btnCancel:hover {
+  background: #d1d5dc;
+  transform: translateY(-1px);
+}
+.btnCancel:active {
+  transform: scale(0.97);
+}
+
+.btnSubmit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: #333cf5;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  font-family: "inter", sans-serif;
+}
+
+.btnSubmit:hover {
+  background: #0913c3;
+  transform: translateY(-1px);
+}
+.btnSubmit:active {
+  transform: scale(0.97);
+}
+.btnSubmit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Remove old gender classes (now handled by shared GenderToggle) ──────── */
+/* .genderGroup, .genderRow, .genderBtn, .genderSelected, .genderUnselected,
+   .radioCircle, .radioFilled — moved to GenderToggle.module.css              */
+
+/* ── react-datepicker global overrides ──────────────────────────────────── */
+/* We use :global() so CSS Modules don't scope these class names             */
+
+:global(.react-datepicker-wrapper) {
+  width: 100%;
+}
+
+:global(.react-datepicker__input-container) {
+  width: 100%;
+}
+
+:global(.react-datepicker-popper) {
+  z-index: 9999 !important;
+}
+
+:global(.react-datepicker) {
+  font-family: "inter", sans-serif !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  overflow: hidden;
+}
+
+:global(.react-datepicker__header) {
+  background: linear-gradient(135deg, #155dfc, #1447e6) !important;
+  border-bottom: none !important;
+  padding: 14px 12px 10px !important;
+  border-radius: 0 !important;
+}
+
+:global(.react-datepicker__current-month),
+:global(.react-datepicker__day-name) {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+:global(.react-datepicker__navigation-icon::before) {
+  border-color: #ffffff !important;
+}
+
+:global(.react-datepicker__navigation:hover *::before) {
+  border-color: #bfdbfe !important;
+}
+
+:global(.react-datepicker__day) {
+  border-radius: 8px !important;
+  color: #101828 !important;
+  font-size: 13px !important;
+  transition:
+    background 0.15s,
+    color 0.15s !important;
+}
+
+:global(.react-datepicker__day:hover) {
+  background: #dbeafe !important;
+  color: #155dfc !important;
+}
+
+:global(.react-datepicker__day--selected),
+:global(.react-datepicker__day--keyboard-selected) {
+  background: #155dfc !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+}
+
+:global(.react-datepicker__day--today) {
+  font-weight: 700 !important;
+  color: #155dfc !important;
+}
+
+:global(.react-datepicker__day--today.react-datepicker__day--selected) {
+  color: #ffffff !important;
+}
+
+:global(.react-datepicker__day--outside-month) {
+  color: #9ca3af !important;
+}
+
+:global(.react-datepicker__year-dropdown),
+:global(.react-datepicker__month-dropdown) {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+:global(.react-datepicker__year-option:hover),
+:global(.react-datepicker__month-option:hover) {
+  background: #dbeafe !important;
+  color: #155dfc !important;
+}
+
+:global(.react-datepicker__year-option--selected_year),
+:global(.react-datepicker__year-option--selected) {
+  background: #155dfc !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+:global(.react-datepicker__year-read-view--down-arrow),
+:global(.react-datepicker__month-read-view--down-arrow) {
+  border-top-color: #ffffff !important;
+}
+
+:global(.react-datepicker__year-read-view),
+:global(.react-datepicker__month-read-view) {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}

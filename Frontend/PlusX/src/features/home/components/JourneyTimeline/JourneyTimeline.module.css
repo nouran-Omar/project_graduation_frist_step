@@ -1,0 +1,33 @@
+/* JourneyTimeline.module.css */
+@reference "../../../../index.css";
+
+.section {
+  @apply py-24 bg-[#FAFAFA] overflow-hidden font-inter;
+}
+
+.timelineLine {
+  @apply absolute shadow-lg left-1/2 -translate-x-1/2 top-[22px] bottom-0 w-1 bg-gray-200 rounded-full hidden md:block overflow-hidden;
+}
+
+.card {
+  @apply relative shadow-lg  bg-white p-6 rounded-3xl overflow-hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.progressBarBase {
+  @apply absolute bottom-6 left-6 right-6 h-2.5 bg-gray-100 rounded-full overflow-hidden;
+}
+
+.iconCircle {
+  @apply w-11 h-11 rounded-full flex items-center justify-center shadow-lg border-[4px] border-white relative z-20 transition-all duration-500;
+}
+
+/* أنميشين كتابة الخط الزمني */
+.activeLine {
+  @apply w-full rounded-full origin-top;
+  background-color: #333cf5;
+}

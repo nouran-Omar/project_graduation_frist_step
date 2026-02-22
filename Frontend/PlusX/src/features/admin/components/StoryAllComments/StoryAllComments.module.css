@@ -1,0 +1,273 @@
+/* ═══════════════════════════════════════════════════
+   StoryAllComments.module.css  –  PulseX Admin
+   ═══════════════════════════════════════════════════ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  background: #f6f7f8;
+  min-height: 100%;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 32px;
+  text-align: center;
+}
+
+/* ── Back Button ─────────────────────────────── */
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: fit-content;
+  transition: color 0.2s;
+}
+
+.backBtn:hover {
+  color: #333cf5;
+}
+
+/* ── Page Header ─────────────────────────────── */
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.titleIcon {
+  font-size: 22px;
+  color: #010218;
+}
+
+.pageTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: #010218;
+  margin: 0;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Comments List ───────────────────────────── */
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.empty {
+  text-align: center;
+  font-size: 14px;
+  color: #9ca3af;
+  font-weight: 600;
+  padding: 60px;
+}
+
+/* ── Comment Card ────────────────────────────── */
+.commentCard {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s;
+}
+
+.commentCard:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Flagged variant */
+.commentFlagged {
+  border-color: #fca5a5;
+  box-shadow: 0 0 0 1px #fca5a5;
+}
+
+/* Flagged Banner */
+.flaggedBanner {
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #fecaca;
+}
+
+.flagIcon {
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+/* Inner layout */
+.commentInner {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  align-items: flex-start;
+}
+
+/* Avatar */
+.commentAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e8eaff;
+  flex-shrink: 0;
+}
+
+.commentAvatarFallback {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e8eaff;
+  color: #333cf5;
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Content */
+.commentContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.commentTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.commentMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.commentAuthor {
+  font-size: 14px;
+  font-weight: 800;
+  color: #010218;
+}
+
+.roleChip {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+.roleDoctor {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.rolePatient {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Delete button */
+.deleteCommentBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: #fef2f2;
+  color: #ef4444;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+
+.deleteCommentBtn:hover {
+  background: #fee2e2;
+  transform: scale(1.08);
+}
+
+/* Time */
+.commentTime {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.timeIcon {
+  font-size: 12px;
+}
+
+/* Text */
+.commentText {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Likes / Replies */
+.commentActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 4px;
+}
+
+.commentAction {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.actionIcon {
+  font-size: 15px;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    gap: 14px;
+  }
+}

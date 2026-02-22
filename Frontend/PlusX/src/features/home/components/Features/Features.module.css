@@ -1,0 +1,127 @@
+@reference "../../../../index.css";
+
+.section {
+  @apply py-24 bg-[#FAFAFA] overflow-hidden font-inter;
+}
+
+.mainCard {
+  @apply bg-white rounded-[48px] relative;
+  min-height: 480px;
+}
+
+.contentGrid {
+  @apply grid  lg:grid-cols-2 gap-10 items-center p-8 md:p-16;
+}
+
+.titleArea {
+  @apply flex items-center gap-4 mb-6;
+}
+
+.titleIcon {
+  @apply w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center text-2xl text-[#3D46F5] shadow-sm;
+}
+
+.titleArea h3 {
+  @apply text-3xl font-bold text-[#010218];
+}
+
+.desc {
+  @apply text-[#757575] text-lg leading-relaxed mb-12 max-w-[500px];
+}
+
+.statsGrid {
+  @apply flex gap-12 mb-5;
+}
+
+.statItem {
+  @apply flex flex-col;
+}
+
+.statVal {
+  @apply text-2xl font-bold text-[#010218];
+}
+
+.statLbl {
+  @apply text-[12px] font-medium text-[#757575] tracking-wide;
+}
+
+/* Progress Bar */
+.progressWrapper {
+  @apply w-full max-w-[400px];
+}
+
+.progressText {
+  @apply flex justify-between text-[11px]  text-[#010218]  mb-2 tracking-wider;
+}
+
+.track {
+  @apply h-1 w-full bg-gray-100 rounded-full overflow-hidden;
+}
+
+.bar {
+  @apply h-full bg-[#333CF5] rounded-full;
+}
+
+/* Image Visuals */
+.imageBox {
+  @apply relative rounded-[5px] overflow-visible bg-slate-900;
+}
+
+.imageBox img {
+  @apply opacity-90 transition-opacity duration-500;
+}
+
+.badgeTop {
+  @apply absolute top-1 right-1 w-10 h-10 flex items-center justify-center text-[#333CF5]   z-20;
+}
+
+.badgeBottom {
+  @apply absolute bottom-1 left-1 w-10 h-10 flex items-center justify-center text-[#F59E0B]   z-20;
+}
+
+/* Navigation Tabs */
+.tabsContainer {
+  @apply absolute -bottom-8 left-1/2 -translate-x-1/2 z-40;
+}
+
+.tabsList {
+  @apply flex items-center gap-4 px-5 py-3;
+}
+
+.tabBtn {
+  @apply w-12 h-12 rounded-full flex border-1 border-gray-300  items-center justify-center text-xl text-gray-400 transition-all duration-300;
+}
+
+.activeTab {
+  @apply bg-[#333CF5] text-white shadow-[0_8px_20px_rgba(51,60,245,0.3)] scale-110;
+}
+
+@media (max-width: 1024px) {
+  .contentGrid {
+    @apply grid-cols-1 p-8 pt-12;
+  }
+  /* .mainCard {
+    @apply rounded-[32px];
+  } */
+}
+/* الجزء البصري - خليه Container مرن */
+.visualContent {
+  @apply relative w-full h-full flex items-center justify-center;
+}
+
+.imageBox {
+  @apply relative w-full overflow-hidden;
+  /* ثبتي النسبة دي عشان كل الصور تبقا نفس الحجم بالظبط */
+  aspect-ratio: 16 / 10; 
+
+  background-color: #f8fafc; /* خلفية فاتحة بدل الـ slate الغامق */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.imageBox img {
+  /* object-cover هي السر عشان ميبانوش متبكسلين أو متمطوطين */
+  @apply w-full h-full object-cover block transition-transform duration-700;
+  opacity: 1 !important; /* شلنا الـ 0.9 عشان الصورة تبان واضحة */
+}
+
+

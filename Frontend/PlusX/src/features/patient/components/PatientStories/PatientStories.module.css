@@ -1,0 +1,169 @@
+.container {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 32px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  margin-bottom: 40px;
+}
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #010218;
+}
+.subtitle {
+  color: #6b7280;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+/* Grid using Flex - 2 items per row */
+.storiesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  flex: 1; /* عشان يملأ المساحة المتاحة */
+}
+
+.storyCard {
+  flex: 0 0 calc(50% - 12px); /* حساب العرض ليكون 2 في الصف بالظبط مع خصم الـ Gap */
+  background: white;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+.storyCard:hover {
+  transform: translateY(-5px);
+  border-color: #333cf5;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.authorInfo h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #010218;
+}
+.authorInfo span {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.storyTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #010218;
+  line-height: 1.4;
+}
+.excerpt {
+  color: #4b5563;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  height: 72px;
+  overflow: hidden;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tags {
+  display: flex;
+  gap: 8px;
+}
+.tag {
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.orange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+.blue {
+  background: rgba(51, 60, 245, 0.1);
+  color: #333cf5;
+}
+
+.readBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333cf5;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Pagination Styling */
+.paginationRow {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+}
+.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.pageBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.pageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.activePage {
+  background: #333cf5;
+  color: white;
+  border: none;
+  font-weight: 700;
+}
+
+.writeBtn {
+  position: absolute;
+  right: 0;
+  background: linear-gradient(90deg, #333cf5 0%, #ed0006 100%);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 24px;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(51, 60, 245, 0.2);
+}

@@ -1,0 +1,152 @@
+.page {
+  background-color: #f9fafb; /* الخلفية الفاتحة المطلوبة */
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #010218;
+}
+.search {
+  margin-top: 20px;
+  padding: 10px;
+}
+.bulkSelectionBar {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: fixed; /* لتثبيته فوق الجدول */
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* الحاوية الرئيسية للهيدر */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* ليكون الكلام في الأعلى والأزرار موازية له */
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+/* العنوان والوصف */
+.titleWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.titleWithIcon h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #010218;
+  margin: 0;
+}
+
+.titleInfo p {
+  color: #757575;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* منطقة الأزرار والبحث */
+.topActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* شريط البحث */
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 10px 15px 10px 40px;
+  border-radius: 50px; /* دائري تماماً مثل الصورة */
+  border: 1px solid #eee;
+  background-color: white;
+  width: 240px;
+  font-size: 14px;
+  outline: none;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 15px;
+  color: #aaa;
+}
+
+/* زر الـ Export (أبيض) */
+.exportBtn {
+  background: white;
+  color: #444;
+  border: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.exportBtn:hover {
+  background-color: #f9f9f9;
+}
+
+/* زر الـ Add Doctor (أزرق) */
+.addBtn {
+  background-color: #333cf5;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(51, 60, 245, 0.2);
+}
+
+.addBtn:hover {
+  background-color: #2830d1;
+}
+.badge {
+  background: #333cf5;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.bulkDelBtn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Settings icon before title */
+.iconSetting {
+  font-size: 35px;
+  color: #010218;
+  flex-shrink: 0;
+}

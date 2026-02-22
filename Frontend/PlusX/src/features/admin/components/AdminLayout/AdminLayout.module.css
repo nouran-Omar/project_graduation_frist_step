@@ -1,0 +1,38 @@
+/* AdminLayout.css */
+
+.admin-theme {
+  --admin-primary: #333CF5;
+  --admin-bg: #F0F2F5; /* لون خلفية مختلف عن الـ Home */
+  --sidebar-color: #ffffff;
+  --card-bg: #ffffff;
+}
+
+/* تخصيص الخلفيات */
+.admin-theme .main-content-bg {
+  background-color: var(--admin-bg);
+}
+
+.admin-theme .sidebar-bg {
+  background-color: var(--sidebar-color);
+}
+
+/* يمكنكِ تغيير ألوان الكومبوننتس الداخلية من هنا برضه */
+.admin-theme .stat-card {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+/* في ملف الـ CSS الخاص بالـ Layout الأساسي */
+.mainContainer {
+  background-color: #ffffff;
+  shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  border: 1px solid #f3f4f6;
+  min-height: calc(100vh - 112px);
+  padding: 20px;
+  
+  /* الإضافة هنا */
+  min-width: 880px; 
+  width: 100%;
+  display: block; /* للتأكد من أنه يأخذ المساحة المتاحة */
+}

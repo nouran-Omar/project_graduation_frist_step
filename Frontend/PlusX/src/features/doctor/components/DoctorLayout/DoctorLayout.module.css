@@ -1,0 +1,62 @@
+/* DoctorLayout.module.css */
+/* ═══════════════════════════════════════════════════
+   Mirrors PatientMainLayout.module.css exactly.
+   Doctor gets the same layout structure as Patient.
+═══════════════════════════════════════════════════ */
+
+.root {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f6f7f8;
+  padding: 20px;
+  gap: 20px;
+  font-family: "inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 310px;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightCol {
+  flex: 1;
+  margin-left: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.header {
+  position: sticky;
+  top: 20px;
+  height: 72px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(229, 231, 235, 0.6);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  z-index: 40;
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(229, 231, 235, 0.6);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  min-height: calc(100vh - 152px);
+  padding: 28px;
+  overflow: hidden;
+}

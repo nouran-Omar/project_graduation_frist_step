@@ -1,0 +1,54 @@
+/* src/components/SuccessPopup/SuccessPopup.module.css */
+.popupOverlay {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 10000;
+  animation: slideIn 0.5s ease-out;
+}
+
+.toast {
+  width: 320px;
+  background: #F3F4F5;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.iconBox {
+  width: 40px;
+  height: 40px;
+  background: #303746;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkIcon {
+  color: #01E17B; /* اللون الأخضر من الفيجما */
+  font-size: 24px;
+}
+
+.textBlock { flex: 1; }
+.contentTitle { font-weight: 600; color: #010218; font-size: 14px; }
+.contentSub { font-size: 11px; color: rgba(1, 2, 24, 0.6); }
+
+.bottomAccent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #01E17B;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

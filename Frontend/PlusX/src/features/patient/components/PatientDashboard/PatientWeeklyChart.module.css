@@ -1,0 +1,126 @@
+/* ═══════════════════════════════════════════════════
+   PatientWeeklyChart.module.css  —  PulseX 2026
+═══════════════════════════════════════════════════ */
+
+.wrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #f1f3f5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 24px 24px 16px;
+}
+
+/* ── Header ──────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #010218;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+/* ── Metric pills ─────────────────────────────────── */
+.pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1.5px solid #e5e7eb;
+  color: #9ca3af;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill:hover {
+  border-color: #d1d5db;
+  color: #6b7280;
+}
+
+.pillActive {
+  font-weight: 700;
+}
+
+.pillDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+/* ── Chart area ──────────────────────────────────── */
+.chartArea {
+  margin-top: 8px;
+}
+
+/* ── Tooltip ─────────────────────────────────────── */
+.tooltip {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+}
+
+.tooltipLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #010218;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.tooltipRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.tooltipRow:last-child {
+  margin-bottom: 0;
+}
+
+.tooltipDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tooltipKey {
+  font-size: 11px;
+  color: #6b7280;
+  flex: 1;
+}
+
+.tooltipVal {
+  font-size: 12px;
+  font-weight: 700;
+}

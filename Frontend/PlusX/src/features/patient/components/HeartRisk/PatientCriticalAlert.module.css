@@ -1,0 +1,56 @@
+.alertCard {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffebeb 100%);
+  border: 1.5px solid #feb2b2;
+  border-radius: 32px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(231, 0, 11, 0.1);
+  margin-top: 24px;
+}
+
+.iconCircle {
+  background: #fee2e2;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.alertTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #010218; /* Black Main Text */
+  margin-bottom: 16px;
+}
+
+.alertDesc {
+  font-size: 16px;
+  color: #4b5563; /* Gray text */
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+.actionBtn {
+  background-color: #333cf5; /* Blue-1 من باليت الألوان */
+  color: white;
+  padding: 14px 32px;
+  border-radius: 28px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(51, 60, 245, 0.3);
+  background-color: #155dfc;
+}

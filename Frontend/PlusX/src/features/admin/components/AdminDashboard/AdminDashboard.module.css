@@ -1,0 +1,402 @@
+/* AdminDashboard.module.css */
+
+/* ── Layout ─────────────────────────────────────────────────── */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: #fff;
+  font-family: "inter", sans-serif;
+}
+
+/* ── Welcome Card (Hero Banner) ──────────────────────────────── */
+.welcomeCard {
+  background: linear-gradient(90deg, #155dfc 0%, #9810fa 100%);
+  border-radius: 28px;
+  padding: 48px 48px 56px 48px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(21, 93, 252, 0.2);
+}
+
+/* دوائر الخلفية الزخرفية */
+.circle1 {
+  position: absolute;
+  width: 384px;
+  height: 384px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: -192px;
+  right: -48px;
+  pointer-events: none;
+}
+
+.circle2 {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  bottom: -128px;
+  left: -128px;
+  pointer-events: none;
+}
+
+.welcomeContent {
+  position: relative;
+  z-index: 2;
+}
+
+.welcomeTitle {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.welcomeSub {
+  font-size: 16px;
+  color: #bfdbfe; /* blue-100 */
+  margin-bottom: 28px;
+}
+
+/* ── Buttons ── */
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.btnAddDoctor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #155dfc;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 10px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.btnAddDoctor:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.btnAddDoctor:active {
+  transform: scale(0.97);
+}
+
+.btnAddPatient {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0913c3;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.btnAddPatient:hover {
+  background: #333cf5;
+  transform: translateY(-2px);
+}
+.btnAddPatient:active {
+  transform: scale(0.97);
+}
+
+.btnIcon {
+  font-size: 18px;
+}
+
+/* ── Stats Grid (داخل الهيرو) ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.statCard {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.statBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statValue {
+  font-size: 30px;
+  font-weight: 900;
+  color: #101828;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.statSub {
+  font-size: 12px;
+  color: #6a7282;
+  font-weight: 500;
+}
+
+/* ── Main Content (الجزء السفلي) ─────────────────────────────── */
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.sectionCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 28px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  outline: 1px solid rgba(115, 115, 115, 0.15);
+  min-height: 380px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #010218;
+}
+
+.viewAll {
+  color: #333cf5;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.viewAll:hover {
+  opacity: 0.75;
+}
+
+/* ── List ── */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  transition: background 0.2s;
+}
+
+.listItem:last-child {
+  margin-bottom: 0;
+}
+.listItem:hover {
+  background: #eff6ff;
+}
+
+.listItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.itemName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #010218;
+  line-height: 1.4;
+}
+
+.itemEmail {
+  font-size: 13px;
+  color: #6a7282;
+}
+
+.editBtn {
+  color: #333cf5;
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.editBtn:hover {
+  background: #eff6ff;
+}
+
+/* ── Empty State ── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.emptyIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #101828;
+  margin-bottom: 8px;
+}
+
+.emptyDesc {
+  font-size: 14px;
+  color: #4a5565;
+  max-width: 300px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.emptyBtnBlue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #333cf5;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(51, 60, 245, 0.25);
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.emptyBtnBlue:hover {
+  background: #0913c3;
+  transform: translateY(-1px);
+}
+
+.emptyBtnGreen {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #00a63e;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 166, 62, 0.25);
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.emptyBtnGreen:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+/* ── Loading Skeleton ── */
+.loadingList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton {
+  height: 72px;
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  border-radius: 16px;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* الكارت الأزرق الكبير */

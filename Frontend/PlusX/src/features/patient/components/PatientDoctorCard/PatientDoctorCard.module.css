@@ -1,0 +1,98 @@
+/* الكارت الأساسي */
+.card {
+  background-color: #ffffff;
+  border-radius: 24px; /* rounded-3xl في فيجما */
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+  border: 0.6px solid #d1d5db; /* outline-zinc-300 */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+  width: 100%;
+  max-width: 320px; /* size-80 في فيجما تعادل 320px */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* الصورة الشخصية (Avatar) */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 2px solid #f3f4f6;
+}
+
+/* اسم الدكتور */
+.docName {
+  font-size: 20px; /* text-xl */
+  font-weight: 600;
+  color: #010218;
+  margin-bottom: 8px;
+  font-family: "inter", sans-serif;
+}
+
+/* الموقع */
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b7280; /* neutral-500 */
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* التقييم والنجوم */
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.rating span {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-left: 4px;
+}
+
+/* السعر */
+.price {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 24px;
+  color: #6b7280;
+}
+
+.price span {
+  font-size: 24px; /* text-2xl */
+  font-weight: 700;
+  color: #010218;
+}
+
+/* زرار الحجز (Book Now) */
+.bookBtn {
+  width: 100%;
+  background-color: #333cf5; /* Blue-1 */
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 24px; /* rounded-3xl */
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bookBtn:hover {
+  background-color: #155dfc;
+}

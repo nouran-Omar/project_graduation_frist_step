@@ -1,0 +1,52 @@
+.gradientCard {
+  background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+  border-radius: 32px;
+  padding: 48px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.heartIcon {
+  font-size: 64px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.mainTitle {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.subTitle {
+  font-size: 16px;
+  color: #dbeafe;
+  margin-bottom: 24px;
+}
+
+.actionBtn {
+  background-color: #f8fafc;
+  color: #2563eb;
+  padding: 16px 32px;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.actionBtn:hover {
+  transform: scale(1.05);
+  background-color: white;
+}

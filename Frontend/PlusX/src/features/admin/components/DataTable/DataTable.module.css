@@ -1,0 +1,291 @@
+.tableContainer {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  margin-top: 20px;
+}
+
+.mainTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.headerRow {
+  background-color: #333cf5;
+  color: white;
+}
+
+.headerRow th {
+  padding: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* تنسيق هيدر الحذف الجماعي المدمج */
+.bulkHeaderRow {
+  background-color: #ffffff;
+}
+
+.bulkActionsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 2px solid #333cf5;
+}
+
+.bulkInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.countText {
+  color: #333cf5;
+  font-weight: 700;
+}
+
+.bulkButtons {
+  display: flex;
+  gap: 4px;
+}
+
+.bulkDeleteBtn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bulkCancelBtn {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 6px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.mainTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f1f1;
+  /* color: #4a4a4a; */
+  font-size: 14px;
+}
+
+.selectedRow {
+  background-color: #f0f2ff;
+}
+
+.userCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #010218;
+}
+
+.userCell img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.priceText {
+  font-weight: bold;
+  color: #000;
+}
+
+.paginationArea {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 8px;
+}
+
+.pageBtn,
+.arrowBtn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  background: white;
+  cursor: pointer;
+}
+
+.activePage {
+  background-color: #333cf5;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #333cf5;
+  cursor: pointer;
+}
+
+.editIcon {
+  color: #4a4a4a;
+  cursor: pointer;
+}
+.deleteIcon {
+  color: #ef4444;
+  cursor: pointer;
+}
+
+.tableContainer {
+  position: relative; /* ضروري جداً ليكون الـ div العائم منسوباً له */
+  background: white;
+  border-radius: 20px;
+  overflow: hidden; /* ليتم قص الـ div العائم عند الزوايا الدائرية للجدول */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  margin-top: 20px;
+}
+
+/* الـ Div العائم */
+.bulkFloatingBar {
+  position: absolute;
+  top: 60px; /* مسافة بسيطة من أعلى الجدول */
+  left: 100px; /* مسافة من اليسار لتكون داخل الجدول */
+  width: 50%;
+  height: 50px; /* نفس ارتفاع الهيدر تقريباً */
+  background-color: #ffffff;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border: solid #e5e7eb 1px;
+  border-radius: 50px;
+
+  box-sizing: border-box;
+  animation: fadeIn 0.2s ease-in;
+}
+
+.bulkInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.countText {
+  color: #333cf5;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.bulkButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.bulkDeleteBtn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.bulkCancelBtn {
+  background: transparent;
+  color: #6b7280;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تأكدي من أن الـ table layout ثابت */
+.mainTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* تعديل الزراير لتوسيط المحتوى (الأرقام والأيقونات) */
+.pageBtn,
+.arrowBtn,
+.activePage {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+
+  /* السحر هنا لتوسيط الأيقونة في النص */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pageBtn,
+.arrowBtn {
+  border: 1px solid #e0e0e0;
+  background: white;
+}
+
+.activePage {
+  background-color: #333cf5;
+  color: white;
+  border: none;
+}
+
+/* تأثير بسيط عند المرور بالماوس */
+.pageBtn:hover,
+.arrowBtn:not(:disabled):hover {
+  background-color: #f8fafc;
+  border-color: #333cf5;
+}
+/* في ملف الـ Sidebar.module.css أو DoctorManagement.module.css */
+
+.arrowBtn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* الحالة لما الزرار يكون معطل (Muted) */
+.arrowBtn:disabled {
+  opacity: 0.4; /* بيخلي الزرار باهت (Muted) */
+  cursor: not-allowed; /* بيغير شكل الماوس لعلامة الممنوع */
+  background-color: #f9fafb;
+  border-color: #f1f1f1;
+}
+
+/* عشان الأيقونة كمان تبهت جواه */
+.arrowBtn:disabled svg {
+  color: #9ca3af !important;
+}

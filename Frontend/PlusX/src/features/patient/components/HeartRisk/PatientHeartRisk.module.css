@@ -1,0 +1,179 @@
+.container {
+  padding: 40px;
+  background-color: #f6f7f8;
+  min-height: 100vh;
+}
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #010218;
+}
+.subtitle {
+  color: #757575;
+  font-size: 18px;
+}
+
+.uploadCard {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  padding-bottom: 24px;
+}
+
+.dropZone {
+  margin: 0 24px;
+  border: 2px dashed #d1d5dc;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropZone:hover {
+  border-color: #333cf5;
+  background-color: #f9fafb;
+}
+
+.uploadIconBox {
+  background: linear-gradient(135deg, #dbeafe 0%, #b2dfdb 100%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.browseLink {
+  color: #333cf5;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.filePreview {
+  margin: 20px 24px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.uploadBtn {
+  margin: 20px 24px 0;
+  width: calc(100% - 48px);
+  background-color: #e5e7eb;
+  color: #99a1af;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+.activeBtn {
+  background-color: #333cf5;
+  color: white;
+  cursor: pointer;
+}
+
+.viewResultBtn {
+  background: linear-gradient(135deg, #155dfc 0%, #e7000b 100%);
+  color: white;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(231, 0, 11, 0.2);
+}
+
+.alertCard {
+  background: linear-gradient(135deg, #ffe2e2 0%, #ffc9c9 100%);
+  border: 1px solid #f0b100;
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.findDoctorBtn {
+  background-color: #333cf5;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto 0;
+}
+.pageWrapper {
+  padding: 40px;
+  background-color: #f6f7f8;
+  min-height: 100vh;
+}
+
+.pageHeader h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #010218;
+}
+
+.pageHeader p {
+  font-size: 18px;
+  color: #757575;
+  margin-top: 4px;
+}
+
+.filePreview {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.viewResultBtn {
+  background: linear-gradient(135deg, #333cf5 0%, #e7000b 100%);
+  color: white;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(51, 60, 245, 0.3);
+  cursor: pointer;
+  border: none;
+}
+
+/* Gauge styling من صورة image_f59bc3.png */
+.gaugeContainer {
+  background: white;
+  border-radius: 28px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.alertCard {
+  background: #fff5f5; /* اللون الأحمر الفاتح جداً */
+  border: 1.5px solid #fecaca;
+  border-radius: 32px;
+  padding: 40px;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.findDoctorBtn {
+  background-color: #333cf5;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 24px auto 0;
+  border: none;
+  cursor: pointer;
+}

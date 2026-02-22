@@ -1,0 +1,54 @@
+.sidebarContainer {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  z-index: 100;
+  height: fit-content;
+}
+
+.sectionLabel {
+  color: rgba(117, 117, 117, 0.7);
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px;
+  text-decoration: none;
+  color: rgba(51, 60, 245, 0.5); /* اللون الشفاف اللي في فيجما */
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLink.active {
+  color: #155DFC;
+}
+
+/* الخط الأزرق الجانبي (Rectangle 24 في فيجما) */
+.navLink.active::before {
+  content: "";
+  position: absolute;
+  left: -20px; /* بيطلع من برا الكادر شوية زي فيجما */
+  width: 10px;
+  height: 36px;
+  background-color: #155DFC;
+  border-radius: 0 16px 16px 0;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.navLink:hover {
+  background: rgba(21, 93, 252, 0.05);
+  color: #155DFC;
+}

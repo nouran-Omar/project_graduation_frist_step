@@ -1,0 +1,145 @@
+@reference "../../index.css";
+
+.pageWrapper {
+  @apply min-h-screen bg-[#F6F7F8] font-inter pb-20;
+}
+.navbar {
+  @apply h-16 bg-white border-b border-gray-100 flex items-center px-10 sticky top-0 z-50;
+}
+.logoArea {
+  @apply flex items-center gap-2 font-bold text-xl text-[#010218];
+}
+.logoArea img {
+  @apply w-8 h-8;
+}
+
+.mainContainer {
+  @apply max-w-[1200px] mx-auto py-16 px-4 flex flex-col items-center;
+}
+.pageHeader {
+  @apply text-center mb-12 max-w-2xl;
+}
+.pageHeader h1 {
+  @apply text-[36px] font-bold text-[#010218] mb-4;
+}
+.pageHeader p {
+  @apply text-[#757575] text-[15px] leading-relaxed;
+}
+
+.formBox {
+  @apply bg-white p-8 md:p-12 rounded-[32px] shadow-[0px_10px_60px_rgba(0,0,0,0.03)] w-full max-w-[780px] border border-gray-50;
+}
+.formTitle {
+  @apply text-center mb-10;
+}
+.formTitle h3 {
+  @apply font-bold text-[22px] text-[#010218];
+}
+.formTitle p {
+  @apply text-[#757575] text-[13px] mt-2;
+}
+
+.inputsGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6;
+}
+.inputGroup label {
+  @apply block text-[12px] font-bold mb-2.5 tracking-wider text-[#010218] uppercase;
+}
+.inputGroup label span {
+  @apply text-[#F87171];
+}
+
+.inputGroup input,
+:global(.react-datepicker-wrapper) input {
+  @apply w-full px-6 py-3.5 rounded-full border border-gray-200 outline-none transition-all text-[14px] focus:ring-4 focus:ring-[#333CF5]/10 bg-white font-inter;
+}
+
+:global(.react-datepicker-wrapper) {
+  @apply block w-full;
+}
+.dateInputWithPadding {
+  @apply !pl-12 !pr-6;
+}
+
+.inputError {
+  @apply !border-[#F87171] !bg-[#FFF5F5];
+}
+.errorText {
+  @apply text-[#F87171] text-[11px] mt-1.5 font-medium ml-4 flex items-center gap-1;
+}
+
+.dateWrapper {
+  @apply relative w-full;
+}
+.calendarIcon {
+  @apply absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none text-xl z-10;
+}
+
+/* ستايل الـ Header المخصص */
+.customHeader {
+  @apply flex items-center justify-between px-3 py-2 bg-gray-50 rounded-2xl mb-3 border border-gray-100;
+}
+
+:global(.react-datepicker-popper) {
+  @apply !z-[999];
+  transform: none !important;
+  margin-top: 10px !important;
+}
+
+/* Gender & Terms */
+.genderSection {
+  @apply mt-8 w-lg;
+}
+.genderOptions {
+  @apply flex gap-5 mt-3;
+}
+.genderOptions label {
+  @apply flex items-center justify-center gap-3 px-6 py-4 rounded-full border border-gray-200 cursor-pointer transition-all font-bold text-[15px] bg-white;
+}
+.genderActive {
+  @apply !border-[#333CF5] !bg-[#333CF5]/5 !text-[#333CF5];
+}
+
+.termsSection {
+  @apply mt-10 pt-8 border-t border-gray-100;
+}
+.checkboxGroup {
+  @apply flex items-start gap-3;
+}
+.checkboxGroup input {
+  @apply mt-1 w-5 h-5 accent-[#333CF5] cursor-pointer;
+}
+
+.submitBtn {
+  @apply bg-[#333CF5] hover:bg-[#252CBF] text-white font-bold py-4 px-20 rounded-full shadow-lg transition-all active:scale-95 block mx-auto mt-10;
+}
+.alreadyHaveAccount {
+  @apply mt-12 p-8 bg-[#F1F5F9] rounded-[24px] text-center;
+}
+.signInBtn {
+  @apply inline-flex items-center gap-2 bg-[#00C853] hover:bg-[#13A956] text-white font-bold py-3.5 px-10 rounded-xl transition-all shadow-md active:scale-95 mt-4;
+}
+
+/* الفوتر الملون */
+.footerFeatures {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-12 mt-24 text-center w-full max-w-[1000px] border-t border-gray-100 pt-16;
+}
+.featureItem {
+  @apply flex flex-col items-center gap-3;
+}
+.featureItem h4 {
+  @apply font-bold text-[16px] text-[#010218];
+}
+.featureItem p {
+  @apply text-[13px] text-[#757575] leading-relaxed max-w-[250px];
+}
+
+.iconBlue {
+  @apply w-14 h-14 bg-[#333CF5]/10 rounded-full flex items-center justify-center text-[#333CF5] text-2xl;
+}
+.iconGreen {
+  @apply w-14 h-14 bg-[#15A96D]/10 rounded-full flex items-center justify-center text-[#00C853] text-2xl;
+}
+.iconOrange {
+  @apply w-14 h-14 bg-[#D0791D]/10 rounded-full flex items-center justify-center text-[#D0791D] text-2xl;
+}

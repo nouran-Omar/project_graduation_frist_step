@@ -1,0 +1,89 @@
+.uploadCard {
+  background: #ffffff;
+  border-radius: 28px; /* نفس الحواف اللي في فيجما */
+  padding: 24px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease;
+}
+
+.cardHeader {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.iconBox {
+  background-color: #333cf5; /* Blue-1 من باليت الألوان بتاعتك */
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerText h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #010218;
+}
+
+.headerText p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* منطقة الرفع (Dashed Zone) */
+.dropZone {
+  border: 2px dashed #d1d5dc;
+  border-radius: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.dropZone:hover {
+  border-color: #333cf5;
+  background-color: #f0f7ff;
+}
+
+.uploadIconCircle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #dbeafe 0%, #b2dfdb 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 28px;
+  color: #333cf5;
+}
+
+.browseLink {
+  color: #333cf5;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.mainBtn {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  border: none;
+  cursor: not-allowed;
+}
+
+.btnActive {
+  background-color: #333cf5;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(51, 60, 245, 0.2);
+}

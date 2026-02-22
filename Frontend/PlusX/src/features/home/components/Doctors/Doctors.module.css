@@ -1,0 +1,47 @@
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  cursor: pointer;
+  z-index: 30;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navBtn:hover {
+  background: #333cf5;
+  color: white;
+  box-shadow: 0 10px 20px rgba(51, 60, 245, 0.2);
+}
+
+/* ECG Animation */
+.ecgPath {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawECG 5s linear infinite;
+}
+
+@keyframes drawECG {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* لو عايزة تخلي الـ Dots ليهم شكل مميز */
+.dot {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}

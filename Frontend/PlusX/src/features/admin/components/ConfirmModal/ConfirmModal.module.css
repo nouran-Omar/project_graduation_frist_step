@@ -1,0 +1,46 @@
+.overlay {
+  position: fixed; /* يضمن ظهوره فوق كل شيء */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* تضليل الخلفية */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+.modalCard {
+  background: white;
+  padding: 40px;
+  border-radius: 28px;
+  width: 480px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.description {
+  color: #666;
+  margin-bottom: 30px;
+}
+.yesBtn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.noBtn {
+  background: #f3f4f6;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}

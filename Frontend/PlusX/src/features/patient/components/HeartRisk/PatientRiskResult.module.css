@@ -1,0 +1,46 @@
+/* ── Container الأساسي ──────────────────────────── */
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 850px; /* عرض مناسب عشان المكونات متفرشش أوي */
+  margin: 0 auto;
+  padding: 20px 0;
+  
+  /* أنيميشن للظهور التدريجي عشان يحسس المريض بذكاء الـ AI */
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ── أنيميشن الظهور (Fade & Slide) ──────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── تعديل المسافات بين المكونات ────────────────── */
+/* ملاحظة: إنتي مستخدمة mb-12 في الـ JSX (Tailwind)، 
+   لو عاوزة تتحكمي فيها من هنا ممكن تستخدمي الكلاس ده: */
+.gaugeWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px; /* تعادل mb-12 */
+}
+
+/* ── استايل إضافي لو حابة تضيفي خلفية Glassmorphism خلف النتيجة ── */
+.resultCard {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 32px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+}

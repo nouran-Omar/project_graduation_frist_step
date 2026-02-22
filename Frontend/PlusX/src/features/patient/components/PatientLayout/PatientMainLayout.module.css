@@ -1,0 +1,74 @@
+/* ═══════════════════════════════════════════════════
+   PatientMainLayout.module.css  —  PulseX 2026
+   App bg : #F6F7F8
+   Cards  : #FFFFFF
+   Accent : #155DFC
+═══════════════════════════════════════════════════ */
+
+/* ── Root Shell ───────────────────────────────────── */
+.root {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f6f7f8;
+  padding: 20px;
+  gap: 20px;
+  font-family: "inter", sans-serif;
+  box-sizing: border-box;
+}
+
+/* ── Sidebar ──────────────────────────────────────── */
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 310px;
+  /* height: calc(100vh - 40px); */
+  /* background-color: #ffffff; */
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  /* border: 1px solid rgba(229, 231, 235, 0.6); */
+  /* overflow: hidden; */
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Right Column ─────────────────────────────────── */
+.rightCol {
+  flex: 1;
+  margin-left: 330px; /* sidebar width (310) + gap (20) */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0; /* prevent flex overflow */
+}
+
+/* ── Sticky Header ────────────────────────────────── */
+.header {
+  position: sticky;
+  top: 20px;
+  height: 72px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(229, 231, 235, 0.6);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  z-index: 40;
+  flex-shrink: 0;
+}
+
+/* ── Main Content ─────────────────────────────────── */
+.main {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(229, 231, 235, 0.6);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  min-height: calc(
+    100vh - 152px
+  ); /* viewport - top/bottom padding - header - gaps */
+  padding: 28px;
+  overflow: hidden;
+}

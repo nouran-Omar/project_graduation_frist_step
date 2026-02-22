@@ -1,0 +1,277 @@
+/* الحاوية الكبيرة لتوسيط الكارت في الصفحة */
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* الكارت الرئيسي - تقسيم Sidebar ومحتوى يمين */
+.bookingCard {
+  display: flex; /* Flexbox لترتيب اليمين والشمال */
+  background: #ffffff;
+  width: 100%;
+  max-width: 1080px;
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ── الجزء اللي على الشمال (Sidebar) ── */
+.sidebar {
+  width: 320px;
+  background-color: #ffffff;
+  border-right: 1px solid #f1f2f4;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.docImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333cf5;
+}
+
+.tag {
+  font-size: 11px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.docName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #010218;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px 0;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.priceRow span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #010218;
+}
+
+/* Stepper Animation (الخطوات على الشمال) */
+.stepper {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.iconCircle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #9ca3af;
+  transition: all 0.4s ease;
+}
+
+.activeStep .iconCircle {
+  border-color: #333cf5;
+  color: #333cf5;
+  box-shadow: 0 0 10px rgba(51, 60, 245, 0.2);
+}
+
+.activeStep p {
+  color: #333cf5;
+  font-weight: 600;
+}
+
+.line {
+  width: 1px;
+  height: 30px;
+  background: #e5e7eb;
+  margin-left: 17px;
+}
+
+.activeStep + .line {
+  background: #333cf5; /* تلوين الخط عند التفعيل */
+}
+
+/* ── المكون الرئيسي (التقويم والمواعيد) ── */
+.mainContent {
+  flex: 1;
+  padding: 40px 50px;
+}
+
+.mainTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #010218;
+  margin-bottom: 40px;
+}
+
+.selectionGrid {
+  display: flex; /* Flexbox لترتيب التقويم بجانب المواعيد */
+  gap: 50px;
+}
+
+.calendarSection {
+  flex: 1.4;
+}
+
+.monthHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.navBtn {
+  background: #f3f4f6;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 👈 ضيفي الـ umns الناقصة */
+  gap: 10px;
+}
+
+.dayLabel {
+  text-align: center;
+  font-size: 13px;
+  color: #9ca3af;
+  padding-bottom: 10px;
+}
+
+.dayBtn {
+  height: 44px;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.dayBtn:hover {
+  background: #f3f4f6;
+}
+
+.activeDay {
+  background: #333cf5 !important;
+  color: white !important;
+}
+
+/* المواعيد (Slots) */
+.timeSection {
+  flex: 1;
+}
+
+.slotsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.timeBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.activeTime {
+  border-color: #333cf5;
+  background: rgba(51, 60, 245, 0.02);
+}
+
+.radioCircle {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  position: relative;
+}
+
+.activeTime .radioCircle {
+  border-color: #333cf5;
+}
+
+.activeTime .radioCircle::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #333cf5;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* زرار التأكيد الكبير */
+.confirmFullBtn {
+  margin-top: 40px;
+  background: #333cf5;
+  color: white;
+  padding: 18px 80px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 8px 20px rgba(51, 60, 245, 0.2);
+}
+
+.confirmFullBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(51, 60, 245, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
