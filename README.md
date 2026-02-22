@@ -352,9 +352,7 @@ This project is developed as part of a graduation project and is for educational
 - **Backend Development**: ASP.NET Core Web API
 - **Frontend Development**: React + Vite (separate repository)
 
-## 📞 Support
 
-For support, email your-email@example.com or create an issue in the repository.
 
 ---
 
